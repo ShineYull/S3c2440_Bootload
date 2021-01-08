@@ -1,0 +1,52 @@
+作者：虞灵乐
+
+Directory Tree：
+
+TouchScreen&LCD_enable	//ARM9 source code from 虞灵乐.
+│  uart.c
+│  timer.c		
+│  string_utils.c	//字符串处理函数库，非本人编写
+│  start.S		//启动文件
+│  sdram.lds	//链接脚本
+│  sdram.c
+│  nor_flash.c
+│  nand_flash.c
+│  my_printf.c
+│  Makefile	// GNU 的 make工具的工作文件 
+│  main.dis	// arm-linux-gcc生成：反汇编文件
+│  main.c
+│  main.bin	// arm-linux-gcc生成：烧录文件，二进制文件
+│  led.c
+│  interrupt.c
+│  exception.c
+│  
+├─app_Home_environment_monitoring		//应用程序 (sensor，画板(还未实现)等...)
+│  │  app_test.c
+│  │  display_sensor_value_to_lcd.c	//sensor desktop
+│  └─include	// app目录下的 *.c 文件对应的头文件
+│
+├─adc_touchscreen                  // 模数转换器驱动 和 触摸屏驱动代码
+│  │  sadc.c                           	   
+│  │  adc_test.c
+│  │  touchscreen.c      
+│  │  touchscreen_test.c
+│  │  ts_calibrate.c
+│  └─include		// adc_touchscreen目录下的 *.c 文件对应的头文件
+│                      
+├─lcd		                 // 液晶屏的驱动代码
+│  │  font.c
+│  │  font_8x16.c
+│  │  framebuffer.c
+│  │  geometry.c
+│  │  lcd.c
+│  │  lcd_4_3.c
+│  │  lcd_controller.c
+│  │  lcd_test.c
+│  │  s3c2440a_lcd_controller.c
+│  │  
+│  └─include		// lcd目录下的 *.c 文件对应的头文件
+│                      
+├─lib                             // 库函数（除法实现）
+│  └─libgcc.a	    // 从 arm-linux-gcc 编译器的库中copy过来的静态链接库 (用于软件实现除法)
+│
+└─include	    //TouchScreen&LCD_enable目录下的 *.c 文件对应的头文件
