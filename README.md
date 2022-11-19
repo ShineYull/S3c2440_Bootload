@@ -1,31 +1,7 @@
-### 专用小系统
-为s3c2440芯片写的内核，从零开始，项目中的每一个文件都是手写出来的（除了libgcc.a库和string库）。
-从汇编到C语言，用心看看源码可以教你如何驱动CPU。
-如何编写链接脚本 (.lds)，如何编写构建文件 (make)。
+### Dedicated small system
+The kernel written for the s3c2440 chip starts from scratch, and every file in the project is handwritten (except libgcc.a library and string library).
+From assembly to C language, looking at the source code carefully can teach you how to drive the CPU.
+How to write link scripts (.lds), how to write build files (make).
+After self-modification, it can be used as a bootloader to start the linux kernel.
 
 --Shine
-
-### 工程中Lookme.txt文件内容如下：
-
-作者：虞灵乐	2019/12/12.
-
-
-1、在此抱歉，时间匆忙，本人还未进行代码的全面优化处理，小型的优化已在代码的注释中标明优化时间。
-
-2、本篇源代码使用Source Insight工程管理编辑器编写，请自行选择一款工程编辑器，将所有文件拖
-      至编辑器，以便查看。
-
-3、烧录文件已经编译好放在当前根目录 "main.bin"，如需查看反汇编 → "main.dis"。更详细的文件说明请
-      打开当前根目录中的 "Directory_Specification.txt" 文件自行查看。
-
-4、编译器：arm-linux-gcc (GCC) 3.4.5
-
-5、编译平台：（linux发行版）ubuntu-16.04.2-x64
-
-6、libgcc.a  该静态链接库 出自 上述的编译器的函数库中。本人只是将其copy出来以便实现除法功能。
-
-
-
-最后：抱歉！代码凌乱，移植性差，请多包含。
-
-PS：本人正在修改，争取做到适用于 基于S3C2440A上的所有外设，以便增强其移植性（基于同一芯片 [S3C2440A] 的移植）。
